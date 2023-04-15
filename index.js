@@ -86,7 +86,7 @@ app.post("/api/persons",(req,res) => {
     res.json(newPerson)
 })
 const unknownPath = (req,res) => {
-    res.status(404).json({error: "not found"})
+    res.status(404).send("<h1>Not found</h1>")
 }
 app.use(unknownPath);
 const PORT = 3001
