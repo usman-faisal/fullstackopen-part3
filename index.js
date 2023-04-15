@@ -89,7 +89,7 @@ const unknownPath = (req,res) => {
     res.status(404).send("<h1>Not found</h1>")
 }
 app.use(unknownPath);
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT,() => {
     console.log("app listening on ",PORT)
 })
