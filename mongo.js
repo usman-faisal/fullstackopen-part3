@@ -33,7 +33,7 @@ if (!name && !number) {
     number,
   });
 
-  person.save().then((res) => {
+  person.save().then(() => {
     console.log("person Saved");
     mongoose.connection.close();
   });

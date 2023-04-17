@@ -7,8 +7,9 @@
     "start": "node index.js ",
     "dev": "nodemon index.js",
     "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../frontend && npm run build && @powershell Copy-Item dist -Recurse ../server",
-    "deploy": "git add . && git commit -m && git push -u origin master",
-    "deploy:full": "npm run build:ui && npm run deploy"
+    "deploy": "git add . && git commit -m \"deploy\" && git push -u origin master",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.38.0",
     "nodemon": "^2.0.22"
   }
 }
